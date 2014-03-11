@@ -1,0 +1,285 @@
+﻿
+.theatre {
+    display: block;
+    list-style: none outside none;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+.theatre-actor {
+    margin: 0;
+}
+.theatre-orbit .theatre-actor {
+    position: absolute;
+}
+.theatre-3d .theatre-actor {
+    border: 2px solid #FFFFFF;
+    box-shadow: 10px -10px 15px rgba(0, 0, 0, 0.4);
+    position: absolute;
+}
+.theatre-vertical .theatre-actor, .theatre-horizontal .theatre-actor {
+    position: absolute;
+    top: 0;
+}
+.theatre-fade, .theatre-show, .theatre-slide {
+    overflow: visible !important;
+}
+.theatre-fade .theatre-actor, .theatre-show .theatre-actor, .theatre-slide .theatre-actor {
+    display: block;
+}
+.theatre-control {
+    -moz-user-select: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: absolute;
+    z-index: 1000;
+}
+.theatre-control:hover {
+    opacity: 1;
+}
+.theatre-control-horizontal-next {
+    cursor: e-resize;
+}
+.theatre-control-horizontal-prev {
+    cursor: w-resize;
+}
+.theatre-control-vertical-next {
+    cursor: n-resize;
+}
+.theatre-control-vertical-prev {
+    cursor: s-resize;
+}
+.theatre-control span {
+    background-image: url("theatre-controls.png");
+    background-repeat: no-repeat;
+    display: block;
+    height: 30px;
+    left: 50%;
+    margin-left: -20px;
+    margin-top: -20px;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+}
+.theatre-next span {
+    background-position: -97px 0;
+}
+.theatre-prev span {
+    background-position: -67px 0;
+}
+.theatre-control-vertical-next span {
+    background-position: -32px -29px;
+}
+.theatre-control-vertical-prev span {
+    background-position: 0 -29px;
+}
+.theatre-stop span {
+    background-position: -157px 6px;
+}
+.theatre-play span {
+    background-position: -128px 6px;
+}
+.theatre-control-horizontal-next, .theatre-control-horizontal-prev {
+    height: 100%;
+    top: 0;
+    width: 30px;
+}
+.theatre-control-horizontal-next {
+    right: 0;
+}
+.theatre-control-horizontal-prev {
+    left: 0;
+}
+.theatre-control-horizontal-play, .theatre-control-horizontal-stop {
+    bottom: 0;
+}
+.theatre-control-horizontal-play {
+    height: 30px;
+    right: 50%;
+    width: 30px;
+}
+.theatre-control-horizontal-stop {
+    height: 30px;
+    left: 50%;
+    width: 30px;
+}
+.theatre-control-vertical-next, .theatre-control-vertical-prev {
+    height: 30px;
+    right: 0;
+    width: 100%;
+}
+.theatre-control-vertical-next {
+    top: 0;
+}
+.theatre-control-vertical-prev {
+    bottom: 0;
+}
+.theatre-control-vertical-play, .theatre-control-vertical-stop {
+    display: none !important;
+}
+.theatre-css3-slide {
+    overflow: visible !important;
+}
+.theatre-css3-slide .theatre-actor {
+    display: block;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    transform: scale(0.1) translate(-50%, 0px);
+    transition: all 1s ease-in-out 0s;
+    z-index: 0;
+}
+.theatre-css3-slide .central {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) !important;
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, 0%);
+    z-index: 100;
+}
+.theatre-css3-slide .right1, .theatre-css3-slide .left1 {
+    display: block;
+    opacity: 1;
+    z-index: 5;
+}
+.theatre-css3-slide .right1 {
+    box-shadow: 50px -5px 15px rgba(0, 0, 0, 0.4) !important;
+    left: 100%;
+    transform: scale(0.25, 0.7) translate(-250%, 0px) rotate(0deg) skewY(6deg);
+}
+.theatre-css3-slide .left1 {
+    box-shadow: -50px -5px 15px rgba(0, 0, 0, 0.4) !important;
+    left: 0;
+    transform: scale(0.25, 0.7) translate(-150%, 0px) rotate(0deg) skewY(-6deg);
+}
+.theatre-css3-slide .right2, .theatre-css3-slide .left2 {
+    display: block;
+    opacity: 1;
+    z-index: 3;
+}
+.theatre-css3-slide .right2 {
+    left: 60%;
+    transform: scale(0.4, 0.6) translate(-125%, 0px) skewY(3deg);
+}
+.theatre-css3-slide .left2 {
+    left: 40%;
+    transform: scale(0.4, 0.6) translate(-125%, 0px) skewY(-3deg);
+}
+.theatre-css3-stack {
+    overflow: visible !important;
+}
+.theatre-css3-stack .theatre-actor {
+    display: none;
+    position: absolute;
+    transition: all 1s ease-in-out 0s;
+}
+.theatre-css3-stack .central {
+    display: block;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 100;
+}
+.theatre-css3-stack .left1 {
+    display: block;
+    left: 0;
+    transform: scale(0.6) rotate(20deg);
+    z-index: 99;
+}
+.theatre-css3-stack .left2 {
+    display: block;
+    left: 0;
+    transform: scale(0.6) rotate(-30deg);
+    z-index: 98;
+}
+.theatre-css3-stack .left3 {
+    display: block;
+    left: 0;
+    top: 0;
+    transform: scale(0.6) rotate(-8deg);
+    z-index: 90;
+}
+.theatre-css3-stack .right1 {
+    display: block;
+    right: 0;
+    transform: scale(0.6) rotate(-20deg);
+    z-index: 99;
+}
+.theatre-css3-stack .right2 {
+    display: block;
+    right: 0;
+    transform: scale(0.6) rotate(30deg);
+    z-index: 98;
+}
+.theatre-css3-stack .right3 {
+    display: block;
+    right: 0;
+    top: 0;
+    transform: scale(0.6) rotate(8deg);
+    z-index: 90;
+}
+.theatre-css3-circle {
+    overflow: visible !important;
+}
+.theatre-css3-circle .theatre-actor {
+    display: none;
+    position: absolute;
+    transform-origin: center top 0;
+    transition: all 1s ease-in-out 0s;
+}
+.theatre-css3-circle .central {
+    display: block;
+    left: 0;
+    top: 0;
+    transform: scale(1) rotate(0deg);
+    z-index: 100;
+}
+.theatre-css3-circle .left1, .theatre-css3-circle .left2, .theatre-css3-circle .left3, .theatre-css3-circle .left4, .theatre-css3-circle .left5, .theatre-css3-circle .right1, .theatre-css3-circle .right2, .theatre-css3-circle .right3, .theatre-css3-circle .right4, .theatre-css3-circle .right5, .theatre-css3-circle .right6 {
+    display: block;
+    left: 50%;
+    top: 50%;
+}
+.theatre-css3-circle .left1 {
+    transform: scale(0.5) rotate(20deg);
+    z-index: 10;
+}
+.theatre-css3-circle .left2 {
+    transform: scale(0.5) rotate(60deg);
+    z-index: 5;
+}
+.theatre-css3-circle .left3 {
+    transform: scale(0.5) rotate(100deg);
+    z-index: 4;
+}
+.theatre-css3-circle .left4 {
+    transform: scale(0.5) rotate(140deg);
+    z-index: 3;
+}
+.theatre-css3-circle .left5 {
+    opacity: 0;
+    transform: scale(0.5) rotate(180deg);
+    z-index: 2;
+}
+.theatre-css3-circle .right1 {
+    transform: scale(0.5) rotate(-20deg);
+    z-index: 10;
+}
+.theatre-css3-circle .right2 {
+    transform: scale(0.5) rotate(-60deg);
+    z-index: 9;
+}
+.theatre-css3-circle .right3 {
+    transform: scale(0.5) rotate(-100deg);
+    z-index: 8;
+}
+.theatre-css3-circle .right4 {
+    transform: scale(0.5) rotate(-140deg);
+    z-index: 7;
+}
+.theatre-css3-circle .right5 {
+    transform: scale(0.5) rotate(-180deg);
+    z-index: 6;
+}
+.theatre-css3-circle .right6 {
+    opacity: 0;
+    transform: scale(0.5) rotate(-220deg);
+    z-index: 5;
+}
